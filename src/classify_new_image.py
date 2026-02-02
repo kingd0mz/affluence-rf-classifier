@@ -8,9 +8,9 @@ from utils import write_geotiff
 
 # ------------------------- PATHS ------------------------- #
 
-NEW_RASTER = "data/raw/QC_268_Stacked_3857.tif"       # <-- change this!
+NEW_RASTER = "data/raw/new_stacked_image.tif"       # <-- change this!
 MODEL_PATH = "models/classifier_rf.joblib"  # saved RF model
-OUT_PATH   = "data/outputs/classified_new_image.tif"
+OUT_PATH   = "data/outputs/classified_new_affluence.tif"
 
 # ------------------------- MAIN ------------------------- #
 
