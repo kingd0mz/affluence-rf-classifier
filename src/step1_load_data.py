@@ -10,7 +10,9 @@ def load_raster_and_vectors(raster_path, vector_path=None):
     gdf = None
     if vector_path is not None:
         gdf = gpd.read_file(vector_path)
-        if gdf.crs != src.crs:
-            gdf = gdf.to_crs(src.crs)
+        print("Raster CRS:", src.crs)
+        print("Vector CRS:", gdf.crs)
+        # if gdf.crs != src.crs:
+        #     gdf = gdf.to_crs(src.crs)
 
     return arr, meta, gdf

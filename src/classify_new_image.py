@@ -3,7 +3,6 @@ import joblib
 import rasterio
 from step1_load_data import load_raster_and_vectors
 from step4_classify_raster import classify_tiled
-from step5_postprocess_rules import apply_ndvi_rules
 from utils import write_geotiff
 
 # ------------------------- PATHS ------------------------- #
@@ -25,11 +24,8 @@ def main():
     print("Classifying new image (tiled)...")
     rf_map = classify_tiled(NEW_RASTER, clf, meta)
 
-    print("Applying NDVI vegetation splitting...")
-    final_map = apply_ndvi_rules(arr, rf_map)
-
     print("Saving output...")
-    write_geotiff(OUT_PATH, final_map, meta)
+    write_geotiff(OUT_PATH, rf_map, meta)
 
     print("\nDONE! Classified image saved to:", OUT_PATH)
 
