@@ -34,12 +34,11 @@ MAX_COMBOS = None
 
 
 BAND_NAMES = [
-    "lst","ntl","dem","glcm_entropy",
-    "glcm_contrast","glcm_homogeneity","land_cover",
-    "building_density","proximity_road","proximity_thirdspace",
-    "proximity_transport","proximity_resto","proximity_park",
-    "ndvi","ndbi","bu","mndwi"
-]
+        "bu","building_density","glcm_contrast","glcm_entropy",
+        "glcm_homogeneity","lst","mndwi","ndbi","ndvi",
+        "proximity_park","proximity_resto","proximity_road",
+        "proximity_thirdspace","proximity_transport","dem","land_cover","ntl"
+    ]
 
 
 def ensure_outdir():

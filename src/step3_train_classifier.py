@@ -41,7 +41,7 @@ def train_classifier(X, y):
     # ------------------------------------------
     print("\nTraining Random Forest classifier...")
     clf = RandomForestClassifier(
-        n_estimators=300,
+        n_estimators=1200,
         max_features="sqrt",
         random_state=42,
         n_jobs=-1
@@ -60,11 +60,10 @@ def train_classifier(X, y):
 
     # Feature importance
     feat_names = [
-        "lst","ntl","dem","glcm_entropy",
-        "glcm_contrast","glcm_homogeneity","land_cover",
-        "building_density","proximity_road","proximity_thirdspace",
-        "proximity_transport","proximity_resto","proximity_park",
-        "ndvi","ndbi","bu","mndwi"
+        "bu","building_density","glcm_contrast","glcm_entropy",
+        "glcm_homogeneity","lst","mndwi","ndbi","ndvi",
+        "proximity_park","proximity_resto","proximity_road",
+        "proximity_thirdspace","proximity_transport","dem","land_cover","ntl"
     ]
 
     print("\n=== FEATURE IMPORTANCE ===")
