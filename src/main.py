@@ -10,10 +10,10 @@ from utils import write_geotiff, mask_raster_to_boundary
 
 
 # ------------------------- PATHS ------------------------- #
-INPUT_RASTER = "data/raw/stacked_17bands.tiff"
-TRAIN_VECTOR = "data/training/training_data.gpkg"
+INPUT_RASTER = "data/raw/paliparan_stacked_17bands.tiff"
+TRAIN_VECTOR = "data/training/paliparan_training_data.gpkg"
 # ADMIN_BDRY = "data/raw/ncr_admbdry.geojson"
-OUT_PATH = f"data/outputs/classified_affluence_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.tif"
+OUT_PATH = f"data/outputs/paliparan_classified_affluence_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.tif"
 
 
 # ------------------------- MAIN PIPELINE ------------------------- #

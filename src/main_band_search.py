@@ -18,7 +18,7 @@ from step2_extract_samples import extract_training_samples
 
 # ------------------------- CONFIG ------------------------- #
 INPUT_RASTER = "data/raw/stacked_17bands.tiff"
-TRAIN_VECTOR = "data/training/training_data.gpkg"
+TRAIN_VECTOR = "data/training/paliparan_training_data.gpkg"
 OUT_DIR = "data/outputs"
 OUT_CSV = os.path.join(OUT_DIR, "band_search_results.csv")
 OUT_TXT = os.path.join(OUT_DIR, "band_search_results.txt")

@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "AB_1",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": null, "Name": null, "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null, "class_id": 5 }, "geometry": { "type": "Point", "coordinates": [ 120.990064692, 14.286462446, 0.0 ] } },
+{ "type": "Feature", "properties": { "id": null, "Name": null, "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null, "class_id": 5 }, "geometry": { "type": "Point", "coordinates": [ 120.988478671, 14.2873049209, 0.0 ] } }
+]
+}

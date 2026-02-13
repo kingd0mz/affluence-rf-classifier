@@ -57,7 +57,7 @@ def extract_training_samples(arr, raster_path, gdf):
 
     # --- Final sanity check ---
     assert len(X) == len(y), "X and y length mismatch after filtering"
-    assert set(np.unique(y)).issubset({1, 2, 3, 4}), \
+    assert set(np.unique(y)).issubset({1, 2, 3, 4, 5}), \
         f"Unexpected class labels found: {np.unique(y)}"
 
     return X, y

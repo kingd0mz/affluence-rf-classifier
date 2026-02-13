@@ -60,10 +60,11 @@ def train_classifier(X, y):
 
     # Feature importance
     feat_names = [
-        "bu","building_density","glcm_contrast","glcm_entropy",
-        "glcm_homogeneity","lst","mndwi","ndbi","ndvi",
+        "bu","building_density","mndwi","ndbi","ndvi",
         "proximity_park","proximity_resto","proximity_road",
-        "proximity_thirdspace","proximity_transport","dem","land_cover","ntl"
+        "proximity_thirdspace","proximity_transport","glcm_contrast",
+        "dem","glcm_entropy","glcm_homogeneity",
+        "land_cover","lst","ntl"
     ]
 
     print("\n=== FEATURE IMPORTANCE ===")
