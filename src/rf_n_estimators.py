@@ -23,13 +23,13 @@ INPUT_RASTER = "data/raw/stacked_17bands.tiff"
 TRAIN_VECTOR = "data/training/training_data.gpkg"
 
 OUT_DIR = "data/outputs"
-OUT_CSV = os.path.join(OUT_DIR, "rf_n_estimators_f1.csv")
+OUT_CSV = os.path.join(OUT_DIR, "rf_n_estimators_f1_new.csv")
 
 TEST_SIZE = 0.30
 RANDOM_STATE = 42
 
 # Estimator sweep
-N_ESTIMATORS_LIST = list(range(100, 2100, 100))  # 100 → 1000
+N_ESTIMATORS_LIST = list(range(100, 2500, 50))  # 100 → 1000
 
 
 def ensure_outdir():

@@ -6,6 +6,7 @@ Purpose:
 - Measure how much predictive power comes purely from satellite imagery
 - No proximity / POI / building density features
 """
+import datetime
 
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
@@ -14,11 +15,14 @@ from sklearn.metrics import f1_score, classification_report, confusion_matrix
 
 from step1_load_data import load_raster_and_vectors
 from step2_extract_samples import extract_training_samples
+from step4_classify_raster import classify_tiled
+from utils import write_geotiff, mask_raster_to_boundary
 
 
 # ------------------------- CONFIG ------------------------- #
 INPUT_RASTER = "data/raw/stacked_17bands.tiff"
 TRAIN_VECTOR = "data/training/training_data.gpkg"
+OUT_PATH = f"data/outputs/classified_affluence__satellite_only{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.tif"
 
 TEST_SIZE = 0.30
 RANDOM_STATE = 42
@@ -105,6 +109,22 @@ def main():
         print(f"{name:20s} {imp:.4f}")
 
     print("========================================")
+
+    # --- Step 4: Classify raster ---
+    print("STEP 4: Classifying full raster...")
+    rf_map = classify_tiled(
+        raster_path=INPUT_RASTER,
+        clf=clf,
+        meta=meta
+    )
+
+    # --- Step 5: Save output ---
+    print("STEP 5: Saving final classification...")
+    write_geotiff(
+        path=OUT_PATH,
+        array=rf_map,
+        meta=meta
+    )
 
 
 if __name__ == "__main__":

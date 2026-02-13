@@ -24,7 +24,7 @@ OUT_CSV = os.path.join(OUT_DIR, "band_search_results.csv")
 OUT_TXT = os.path.join(OUT_DIR, "band_search_results.txt")
 
 # Random forest / sampling defaults -- lower values speed up testing.
-N_ESTIMATORS = 200
+N_ESTIMATORS = 1200
 TEST_SIZE = 0.30
 RANDOM_STATE = 42
 
